@@ -17,7 +17,7 @@ export function ensureAuthenticated(request: Request, response: Response, next: 
     const [, token] = authToken.split(" ")
 
     try{ 
-        const { sub } = verify(token, "6e0541aa1ae7bc9fe4bfa082c9ca783b") as IPlayLoad
+        const { sub } = verify(token, process.env.JTW_SECRET) as IPlayLoad
         request.user_id = sub
 
         return next();
