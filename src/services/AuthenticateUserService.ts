@@ -29,8 +29,8 @@ class AuthenticateUserService{
 
         const { data: accessTokenResponse } = await axios.post<IAcessTokenReponse>(url,null,{
             params: {
-                client_id: process.env.GITHUB_CLIENT_ID,
-                client_secret: process.env.GITHUB_CLIENT_SECRET_KEY,
+                client_id: "a746deb2f9c94f35eba8",
+                client_secret: "84ffcbb03f6967b83d0252a8d63cdec54ccd6160",
                 code,
             },
             headers: {
@@ -70,7 +70,7 @@ class AuthenticateUserService{
                 id: user.id,
             }
         },
-            process.env.JTW_SECRET,
+            "6e0541aa1ae7bc9fe4bfa082c9ca783b",
             {
                 subject: user.id,
                 expiresIn: "1d"

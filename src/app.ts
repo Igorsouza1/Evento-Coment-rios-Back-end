@@ -28,7 +28,7 @@ app.use(router);
 
 app.get("/github", (request, response) => {
     response.redirect(
-        `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`)
+        `https://github.com/login/oauth/authorize?client_id=a746deb2f9c94f35eba8`)
 })
 
 app.get("/signin/callback", (request, response) => {
